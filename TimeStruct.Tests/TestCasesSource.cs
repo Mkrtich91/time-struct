@@ -1,9 +1,11 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using NUnit.Framework;
 
 namespace TimeStruct.Tests
 {
+#pragma warning disable S1118
     public sealed class TestCasesSource
+#pragma warning restore S1118
     {
         public static IEnumerable<TestCaseData> TestCasesForToString
         {

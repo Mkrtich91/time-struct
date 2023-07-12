@@ -4,7 +4,7 @@ namespace TimeStruct
 {
     [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1600:ElementsMustBeDocumented", Justification = "Reviewed.")]
     [SuppressMessage("StyleCop.CSharp.ReadabilityRules", "SA1101:PrefixLocalCallsWithThis", Justification = "Reviewed.")]
-    public struct Time
+    public readonly struct Time
     {
         private readonly int hours;
         private readonly int minutes;
@@ -16,7 +16,6 @@ namespace TimeStruct
 
         public Time(int hours, int minutes)
         {
-            // Convert hours and minutes to standard range
             while (minutes < 0)
             {
                 hours--;
@@ -49,7 +48,7 @@ namespace TimeStruct
             get { return minutes; }
         }
 
-        public override string ToString()
+        public new string ToString()
         {
             return $"{hours:D2}:{minutes:D2}";
         }
